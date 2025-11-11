@@ -8,21 +8,19 @@ import React from "react";
 
 export default function Portfolio() {
   return (
-    <div className="h-full w-full flex justify-between sm:items-center items-start">
-      <section className="flex flex-col gap-2 flex-1 max-sm:hidden">
+    <div className="h-full w-full flex justify-between items-start">
+      <section className="flex flex-col gap-0.5 flex-4 max-sm:hidden">
         {portfolioItems.map((item: TPortfolioItem) => (
-          <Link
-            key={item.link}
-            href={`/portfolio/${item.link}`}
-            className="menu-item"
-          >
-            {item.title}
-          </Link>
+          <div key={item.link}>
+            <Link href={`/portfolio/${item.link}`} className="menu-item">
+              {item.title}
+            </Link>
+          </div>
         ))}
       </section>
-      <section className="flex flex-col items-end gap-5 flex-2">
-        <h2>ABOUT</h2>
-        <div className="flex flex-col gap-2">
+      <section className="flex flex-col items-end gap-2 flex-5">
+        <h3>ABOUT</h3>
+        <div className="flex flex-col gap-1 max-sm:gap-4">
           {aboutMeSection.map((paragraph, index) => (
             <p key={index} className="text-end">
               {paragraph}
