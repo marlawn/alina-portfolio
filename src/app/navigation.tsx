@@ -8,7 +8,7 @@ export const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="relative w-full">
+    <nav className="relative w-full mb-4">
       <div className="w-full hidden gap-10 sm:flex items-center justify-between">
         <div className="flex gap-10">
           <Link href="/" className="menu-item">
@@ -21,7 +21,7 @@ export const Navigation = () => {
       </div>
 
       {pathname !== "/" && (
-        <h3 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <h3 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-sm:hidden">
           ALINA PODOLYAN
         </h3>
       )}
